@@ -1,0 +1,52 @@
+a.  Print odd numbers in an array
+
+    Anonymous function:
+
+            var array=[1,2,3,4,5]
+function odds(){
+                  for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i])
+                        } 
+                   }
+                }
+                odds();
+
+    IIFE:
+           
+            (function(array){
+                for(var i = 0 ; i< array.length ; i++){
+                    if(array[i]%2!=0){
+                        console.log(array[i])
+                        
+                    }
+                    
+                }
+            })([1,2,3,4])
+
+    Arrow function:
+
+            let array=[1,2,3,4,5]
+            array.forEach((i)=>{
+                if(array[i]%2 != 0){
+                    console.log(array[i])
+                    }
+                })
+
+
+b.  Convert all the strings to title caps in a string array
+
+    Anonymous function:
+            
+            
+            function titleCase(str){
+    var words = str.toLowerCase().split(" ").map(function(i){
+        return i[0].toUpperCase()+i.slice(1)
+    })
+    return words.join(" ")
+}
+
+titleCase('my name is raja');
+
+    IIFE:
+            
